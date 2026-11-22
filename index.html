@@ -18,7 +18,85 @@ a{color:#1F2328}a:hover{color:#0B0F14}
 html{scroll-behavior:smooth;color-scheme:light}
 a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
 @media (max-width:640px){section{padding-left:16px!important;padding-right:16px!important}}
+
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:40px;height:40px;border-radius:11px;background:#E4F1EF;color:#0F766E}
+.ico .i{width:20px;height:20px}
+.ico.sm{width:32px;height:32px;border-radius:9px}.ico.sm .i{width:16px;height:16px}
+.ico.lg{width:48px;height:48px;border-radius:13px}.ico.lg .i{width:24px;height:24px}
+a .i,button .i,p .i{flex:0 0 auto}
+.card{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,border-color .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px -20px rgba(15,23,42,.35);border-color:#C9D1DA!important}
+.card .ico{transition:transform .3s cubic-bezier(.2,.8,.2,1)}.card:hover .ico{transform:scale(1.08) rotate(-4deg)}
+.co{background:#EEF1F4;border:1px solid #DDE2E8;border-radius:24px;padding:clamp(20px,4vw,40px);display:flex;flex-direction:column;gap:28px;margin-bottom:24px}
+.co-title{margin:0;font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.4vw,38px);letter-spacing:-.02em;line-height:1.1}
+.tl-logo{width:40px;height:40px;border-radius:11px;border:1px solid #DDE2E8;object-fit:cover;display:block;flex:0 0 auto;background:#fff}
+.co-logo{width:48px;height:48px;border-radius:13px;border:1px solid #DDE2E8;object-fit:cover;display:block;flex:0 0 auto}
+.badge{font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;background:#0F766E;color:#fff}
+.mini-stat{border:1px solid #DDE2E8;border-radius:14px;padding:14px 16px;background:#F6F7F9}
+.mini-stat .ico{margin-bottom:8px}
+.mini-stat .n{margin:0;font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:600;line-height:1.15}
+.mini-stat .l{margin:0;font-size:13px;color:#57606A}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:13px;padding:4px 10px;border-radius:6px;border:1px solid #C9D1DA;color:#3D4652;background:#fff}
+.lead{margin:0;color:#3D4652}
+.also{margin:0;color:#57606A;font-size:15px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px 32px}
+.feats.narrow{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px 28px}
+.feats.compact{gap:12px 28px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.feats.one{grid-template-columns:1fr}
+.feat{display:flex;gap:12px;align-items:flex-start}
+.feats.compact .feat{align-items:center}
+.feat .ft{margin:0 0 2px;font-weight:600}
+.feat .fd{margin:0;color:#3D4652;font-size:15px}
+.link{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:500;color:#0F766E;text-decoration:none;align-self:flex-start}
+.link:hover{color:#0B5A54;text-decoration:underline}
+.shot{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;font-size:13px;color:#57606A}
+.shot img{transition:transform .3s cubic-bezier(.2,.8,.2,1)}.shot:hover img{transform:translateY(-4px)}
+.app-split{display:flex;flex-wrap:wrap;gap:28px;align-items:center}
+.phone{width:150px;height:268px;border-radius:20px;border:4px solid #1F2328;outline:1px solid #C9D1DA;object-fit:cover;object-position:top;display:block;flex:0 0 auto}
+.expand-all{all:unset;box-sizing:border-box;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid #C9D1DA;border-radius:10px;font:500 14px Inter,system-ui,sans-serif;color:#1F2328;cursor:pointer;background:#fff;transition:background .2s,border-color .2s}
+.expand-all:hover{background:#EEF1F4}
+.expand-all:focus-visible{outline:2px solid #0F766E;outline-offset:3px}
+html:not(.js) .expand-all{display:none}
+/* app accordion */
+.apps{display:flex;flex-direction:column;gap:12px}
+.app{background:#fff;border:1px solid #DDE2E8;border-radius:20px;overflow:hidden;transition:border-color .25s,box-shadow .35s}
+.app:hover{border-color:#C9D1DA}
+.app.open{border-color:#C9D1DA;box-shadow:0 18px 40px -26px rgba(15,23,42,.4)}
+.app-head{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:16px;padding:16px 20px;cursor:pointer;font-family:Inter,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+.app-head:focus-visible{outline:2px solid #0F766E;outline-offset:-3px;border-radius:20px}
+.app-icons{display:flex;flex:0 0 auto}
+.app-icon{width:56px;height:56px;border-radius:14px;border:1px solid #E3E7EC;object-fit:cover;display:block;background:#fff;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.app-icons .app-icon+.app-icon{margin-left:-16px;box-shadow:0 0 0 2px #fff}
+.app-head:hover .app-icon{transform:scale(1.06) rotate(-3deg)}
+.app-head:hover .app-icon+.app-icon{transform:scale(1.06) rotate(3deg) translateX(4px)}
+.app-text{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
+.app-name{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;letter-spacing:-.01em;color:#1F2328;line-height:1.25}
+.app-meta{font-size:13px;color:#57606A}
+.app-sum{font-size:15px;color:#3D4652;margin-top:2px}
+.app-chev{width:36px;height:36px;border-radius:50%;border:1px solid #DDE2E8;display:flex;align-items:center;justify-content:center;color:#57606A;flex:0 0 auto;transition:transform .45s cubic-bezier(.2,.8,.2,1),background .25s,color .25s,border-color .25s}
+.app-head:hover .app-chev{border-color:#0F766E;color:#0F766E}
+.app.open .app-chev{transform:rotate(180deg);background:#0F766E;border-color:#0F766E;color:#fff}
+.app-body{display:grid;grid-template-rows:1fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.app-inner{overflow:hidden;min-height:0}
+.app-pad{margin:0 20px;padding:20px 0 24px 72px;border-top:1px solid #EEF1F4;display:flex;flex-direction:column;gap:16px;transition:opacity .4s .08s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.js .app:not(.open) .app-body{grid-template-rows:0fr}
+.js .app:not(.open) .app-pad{opacity:0;transform:translateY(-10px);transition:opacity .2s,transform .35s}
+.js .app:not(.open) .app-inner{visibility:hidden;transition:visibility 0s .5s}
+.js .app.open .app-inner{visibility:visible}
+@media (max-width:640px){
+  .app-head{padding:14px 14px;gap:12px}.app-icon{width:48px;height:48px;border-radius:12px}
+  .app-name{font-size:18px}.app-sum{display:none}
+  .app-pad{margin:0 14px;padding-left:0}
+  .phone{width:128px;height:228px}
+  .expand-all{align-self:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:0s!important;transition-delay:0s!important}
+}
+
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 
@@ -55,8 +133,8 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
       <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.3; color: #1F2328; max-width: 720px">I build mobile apps people use every day, from delivery marketplaces to enterprise safety platforms.</p>
       <p style="margin: 0; font-size: 17px; color: #57606A; max-width: 640px">Co-founder &amp; full-stack developer at <strong style="color: #1F2328; font-weight: 600">GoVisual</strong> · Mobile Team Leader at <strong style="color: #1F2328; font-weight: 600">Bulbul</strong> · previously Mobile Developer at <strong style="color: #1F2328; font-weight: 600">UniFi Solutions</strong>.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
-        <a href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; background: #0F766E; color: #FFFFFF; text-decoration: none; font-weight: 600">See my work</a>
-        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none; font-weight: 500">Get in touch</a>
+        <a href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; background: #0F766E; color: #FFFFFF; text-decoration: none; font-weight: 600; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>See my work</a>
+        <a href="#contact" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none; font-weight: 500; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Get in touch</a>
       </div>
     </div>
     <div style="flex: 1 1 280px; display: flex; justify-content: center">
@@ -67,16 +145,19 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
   <!-- STATS -->
   <section aria-label="At a glance" style="max-width: 1160px; margin: 0 auto; padding: 0 24px 96px">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: #E3E7EC; border: 1px solid #E3E7EC; border-radius: 16px; overflow: hidden">
-      <div style="background: #F6F7F9; padding: 28px 24px">
-        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">13</p>
+      <div style="background: #F6F7F9; padding: 28px 24px; display: flex; flex-direction: column; gap: 4px">
+        <span class="ico" style="margin-bottom: 10px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">13</p>
         <p style="margin: 0; color: #57606A; font-size: 15px">apps built across 3 companies</p>
       </div>
-      <div style="background: #F6F7F9; padding: 28px 24px">
-        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">5</p>
+      <div style="background: #F6F7F9; padding: 28px 24px; display: flex; flex-direction: column; gap: 4px">
+        <span class="ico" style="margin-bottom: 10px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 14v2.2l1.6 1"/><path d="M16 2v4"/><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M3 10h5"/><path d="M8 2v4"/><circle cx="16" cy="16" r="6"/></svg></span>
+        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">5</p>
         <p style="margin: 0; color: #57606A; font-size: 15px">years building Flutter apps</p>
       </div>
-      <div style="background: #F6F7F9; padding: 28px 24px">
-        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em">7</p>
+      <div style="background: #F6F7F9; padding: 28px 24px; display: flex; flex-direction: column; gap: 4px">
+        <span class="ico" style="margin-bottom: 10px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span>
+        <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">7</p>
         <p style="margin: 0; color: #57606A; font-size: 15px">industries: logistics, IoT, HSE, health…</p>
       </div>
     </div>
@@ -87,40 +168,49 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
     <p style="margin: 0 0 8px; font-size: 14px; color: #0F766E; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">What I do</p>
     <h2 style="margin: 0 0 40px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; line-height: 1.1">What I can do for your team</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Build mobile apps end to end</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Build mobile apps end to end</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Flutter apps for Android and iOS, from the first screen to the store, with clean architecture, BLoC and tests.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Lead a mobile team</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Lead a mobile team</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Plan the work, set the architecture, review code and keep the team shipping across several apps at once.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Turn requirements into product</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Turn requirements into product</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Work with clients and product managers, write clear specs and tickets in Jira or OpenProject, and explain trade-offs in plain language.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Ship, release and update</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Ship, release and update</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">CI/CD with Codemagic and GitHub Actions, over-the-air fixes with Shorebird, releases through Google Play Console and TestFlight, app signing and build flavours.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Real-time and offline features</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Real-time and offline features</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Live tracking with WebSockets and maps, push notifications, and offline work that syncs and resolves conflicts.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Web, backend and AI</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Web, backend and AI</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Next.js and Node/MongoDB when a product needs the web side too, AI features like chat, voice and streaming agents, and daily AI-assisted development.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">White-label and multi-brand apps</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">White-label and multi-brand apps</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">One codebase shipped under several brands, each with its own name, icon, colours, Firebase project and store listing.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Arabic and English apps</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Arabic and English apps</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Right-to-left layouts done properly, so Arabic screens feel native, not mirrored as an afterthought.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
-        <h3 style="margin: 0; font-size: 18px; font-weight: 600">Work in big teams</h3>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" x2="6" y1="9" y2="21"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 18px; font-weight: 600">Work in big teams</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Git and GitHub every day: feature branches, pull requests, code review, merging and rebasing, alongside web, backend and QA.</p>
       </div>
     </div>
@@ -133,285 +223,361 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
         <p style="margin: 0 0 8px; font-size: 14px; color: #0F766E; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">Selected work</p>
         <h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; line-height: 1.1">Apps I've built and led</h2>
       </div>
-      <p style="margin: 0; color: #57606A; max-width: 420px">Real apps with real users: payments, live tracking, offline sync and white-label builds.</p>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px; max-width: 420px">
+        <p style="margin: 0; color: #57606A">Real apps with real users: payments, live tracking, offline sync and white-label builds. Tap an app to see what I built.</p>
+        <button type="button" class="expand-all" aria-pressed="false"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg><span>Expand all</span></button>
+      </div>
     </div>
 
     <!-- ===== UNIFI ===== -->
-    <section aria-labelledby="unifi-title" style="background: #EEF1F4; border: 1px solid #DDE2E8; border-radius: 24px; padding: clamp(20px, 4vw, 40px); display: flex; flex-direction: column; gap: 28px; margin-bottom: 24px">
+    <section aria-labelledby="unifi-title" class="co">
       <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start">
         <div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
           <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-            <span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF">Main role · 20 months</span>
+            <span class="badge">Main role · 20 months</span>
             <span style="font-size: 13px; color: #57606A">Mobile Developer · Full-time, remote · Mar 2025 – Nov 2026</span>
           </div>
-          <h3 id="unifi-title" style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 3.4vw, 38px); letter-spacing: -0.02em; line-height: 1.1">UniFi Solutions</h3>
+          <div style="display: flex; align-items: center; gap: 14px">
+            <span class="ico lg"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span>
+            <h3 id="unifi-title" class="co-title">UniFi Solutions</h3>
+          </div>
           <p style="margin: 0; color: #3D4652; max-width: 720px">My longest and biggest role. UniFi builds enterprise platforms for IoT, facility management, health &amp; safety, logistics and healthcare. I worked across 11 of its Flutter apps: building new apps from the first screen, owning whole modules end to end, and shipping white-label versions for different clients.</p>
         </div>
         <div style="flex: 1 1 260px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
-          <div style="border: 1px solid #DDE2E8; border-radius: 14px; padding: 14px 16px">
-            <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">7</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">industries</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 14px; padding: 14px 16px">
-            <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">11</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">apps worked on</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 14px; padding: 14px 16px">
-            <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">3</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">platforms: Android, iOS, web</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 14px; padding: 14px 16px">
-            <p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 600">1,000+</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">test files touched</p>
-          </div>
+          <div class="mini-stat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span><p class="n">7</p><p class="l">industries</p></div>
+          <div class="mini-stat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><p class="n">11</p><p class="l">apps worked on</p></div>
+          <div class="mini-stat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></svg></span><p class="n">3</p><p class="l">platforms: Android, iOS, web</p></div>
+          <div class="mini-stat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg></span><p class="n">1,000+</p><p class="l">test files touched</p></div>
         </div>
       </div>
 
-      <!-- HSEQ -->
-      <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 20px; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; gap: 16px">
-        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between">
-          <h4 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.02em">ALEF 360° HSEQ</h4>
-          <p style="margin: 0; font-size: 13px; color: #57606A">Jun – Nov 2026 · core developer</p>
-        </div>
-        <p style="margin: 0; color: #3D4652">An enterprise health, safety, environment and quality platform. Multi-tenant and white-label, in Arabic and English. I built the app's foundation and owned several of its core modules.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px 32px">
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">Foundation</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Material 3 design tokens taken from Figma, theming, sign-in with OTP and password reset, home, profile and navigation.</p>
-          </div>
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">QR scan-to-act</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Scan a sticker to raise a ticket with photos, with a 52-field prefill catalogue and complaint forms for visitors who aren't signed in.</p>
-          </div>
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">Template builder</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Inspection checklists with tables, repeatable sections, logic rules, publish checks and quality document codes.</p>
-          </div>
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">Offline sync centre</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Work offline, then resolve conflicts with a clear "what changed / who changed it" view and background refresh.</p>
-          </div>
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">AI agent</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Streaming answers, credit balance and cost per reply, low-credit alerts, and chart and photo outputs.</p>
-          </div>
-          <div>
-            <p style="margin: 0 0 2px; font-weight: 600">Plans and modules</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Payment-required screens, and every screen, deep link and notification gated by the client's plan and enabled modules.</p>
-          </div>
-        </div>
-        <p style="margin: 0; color: #57606A; font-size: 15px">Also: incident report wizard, investigation sign-off, PDF ticket reports, work-order integration with the CAFM product, and forced updates.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px">
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Flutter</span>
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">BLoC</span>
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">fpdart</span>
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Firebase</span>
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Google Maps</span>
-          <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Build flavours</span>
-        </div>
-      </article>
-
-      <!-- CAFM -->
-      <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 20px; padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; gap: 18px">
-        <div style="display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; justify-content: space-between">
-          <h4 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 28px; letter-spacing: -0.02em">Facilitrol-X CAFM Field App</h4>
-          <p style="margin: 0; font-size: 13px; color: #57606A">Aug 2025 – Oct 2026 · live on Google Play and the App Store under 3 brands</p>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
-          <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-            <p style="margin: 0; color: #3D4652">A maintenance (CAFM / CMMS) app that field technicians use every day: work orders, assets, inventory, surveys, snags, attendance and shifts. One codebase published as Facilitrol-X Hero, Operon and EAL, in 15 languages.</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px">
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">Snag tasks, built end to end</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">List and details, review, comments, reopen, a dedicated close page, adding items and assets, and assigned users.</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">Surveys</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">Survey statuses, comments and findings, closing a survey, and paged lists.</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">Work orders</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">Redesigned work-order screens with filters, a calendar view, correct date handling, status flow and a performance chart.</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">Assets and inventory</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">Asset comments and detail sheets, inventory requests, and document upload options.</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">White label and release</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">Added the Tadoom brand (name, icons, splash, Firebase, API keys) and refreshed icons and splash screens for every brand.</p>
-              </div>
-              <div>
-                <p style="margin: 0 0 2px; font-weight: 600">Connected products</p>
-                <p style="margin: 0; color: #3D4652; font-size: 15px">Health-and-safety ticket files shown inside work orders, a QR scanner with flash and camera switch, and right-to-left fixes.</p>
-              </div>
+      <div class="apps">
+        <!-- HSEQ -->
+        <article class="app open">
+          <button type="button" class="app-head" aria-expanded="true" aria-controls="app-hseq">
+            <span class="app-icons"><img src="assets/app-icons/hseq.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">ALEF 360° HSEQ</span>
+              <span class="app-meta">Jun – Nov 2026 · core developer</span>
+              <span class="app-sum">Enterprise health, safety and quality platform. Multi-tenant, white-label, Arabic and English.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-hseq"><div class="app-inner"><div class="app-pad">
+            <p class="lead">An enterprise health, safety, environment and quality platform. Multi-tenant and white-label, in Arabic and English. I built the app's foundation and owned several of its core modules.</p>
+            <div class="feats">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="7" x="3" y="3" rx="1"/><rect width="9" height="7" x="3" y="14" rx="1"/><rect width="5" height="7" x="16" y="14" rx="1"/></svg></span><div><p class="ft">Foundation</p><p class="fd">Material 3 design tokens taken from Figma, theming, sign-in with OTP and password reset, home, profile and navigation.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg></span><div><p class="ft">QR scan-to-act</p><p class="fd">Scan a sticker to raise a ticket with photos, with a 52-field prefill catalogue and complaint forms for visitors who aren't signed in.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg></span><div><p class="ft">Template builder</p><p class="fd">Inspection checklists with tables, repeatable sections, logic rules, publish checks and quality document codes.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg></span><div><p class="ft">Offline sync centre</p><p class="fd">Work offline, then resolve conflicts with a clear "what changed / who changed it" view and background refresh.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span><div><p class="ft">AI agent</p><p class="fd">Streaming answers, credit balance and cost per reply, low-credit alerts, and chart and photo outputs.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg></span><div><p class="ft">Plans and modules</p><p class="fd">Payment-required screens, and every screen, deep link and notification gated by the client's plan and enabled modules.</p></div></div>
             </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 8px">
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Flutter</span>
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">BLoC</span>
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Clean Architecture</span>
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Firebase</span>
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Hive cache</span>
-              <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">White-labelling</span>
-            </div>
-          </div>
-          <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px">
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 16px 8px 8px; background: #EEF1F4; border-radius: 14px">
-              <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.facilitrolX.technician" style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; color: #57606A">
-                <img src="assets/fx-facilitrol.png" alt="Facilitrol-X field app home screen in blue, with clock-in timer and work-order progress" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
-                Facilitrol-X
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.operon.technician" style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; color: #57606A">
-                <img src="assets/fx-operon.png" alt="Operon brand of the same app in green, showing work orders" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
-                Operon
-              </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.eal.technician" style="display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; font-size: 13px; color: #57606A">
-                <img src="assets/fx-eal.png" alt="EAL brand of the same app in dark green, showing work orders" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
-                EAL
-              </a>
-            </div>
-            <p style="margin: 0; font-size: 13px; color: #656D76; text-align: center">Tap a screen for Google Play. On the App Store:
-              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/facilitrol-x-hero-field-app/id6473368377" style="color: #57606A">Hero</a> ·
-              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/operon-field-app/id6473077208" style="color: #57606A">Operon</a> ·
-              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/eal-field-app/id6473384986" style="color: #57606A">EAL</a></p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Alef -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
-        <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-          <div>
-            <h4 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 24px; letter-spacing: -0.01em">Alef IoT Portal</h4>
-            <p style="margin: 2px 0 0; font-size: 13px; color: #57606A">Apr 2025 – Nov 2026 · my longest project</p>
-          </div>
-          <p style="margin: 0; color: #3D4652">Mobile portal for an IoT platform that monitors buildings, vehicle fleets and energy use in real time.</p>
-          <ul style="margin: 0; padding-left: 20px; color: #3D4652; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
-            <li><strong style="font-weight: 600; color: #1F2328">Buildings:</strong> alarms, fault models, analysis history, indoor-air-quality scores and trends</li>
-            <li><strong style="font-weight: 600; color: #1F2328">Fleet (TechNex):</strong> dispatch jobs with manual, scheduled and calendar views, vehicle alarms, driver statistics</li>
-            <li><strong style="font-weight: 600; color: #1F2328">Energy and water:</strong> dashboards, breach alerts, heatmaps with custom date ranges, multi-level charts</li>
-            <li><strong style="font-weight: 600; color: #1F2328">Devices and assets:</strong> contracts, custom attributes, bulk actions, notification groups, webhooks</li>
-            <li>Live monitoring over WebSockets, map clustering and reverse geocoding</li>
-            <li>Fixed the top 12 security and crash issues from an audit</li>
-          </ul>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Socket.IO</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Syncfusion charts</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Google Maps</span>
-          </div>
+            <p class="also">Also: incident report wizard, investigation sign-off, PDF ticket reports, work-order integration with the CAFM product, and forced updates.</p>
+            <div class="tags"><span>Flutter</span><span>BLoC</span><span>fpdart</span><span>Firebase</span><span>Google Maps</span><span>Build flavours</span></div>
+          </div></div></div>
         </article>
 
+        <!-- CAFM -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-cafm">
+            <span class="app-icons"><img src="assets/app-icons/facilitrol-x.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">Facilitrol-X CAFM Field App</span>
+              <span class="app-meta">Aug 2025 – Oct 2026 · live on Google Play and the App Store under 3 brands</span>
+              <span class="app-sum">The maintenance app field technicians use every day: work orders, assets, surveys and snags.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-cafm"><div class="app-inner"><div class="app-pad">
+            <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+              <div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+                <p class="lead">A maintenance (CAFM / CMMS) app that field technicians use every day: work orders, assets, inventory, surveys, snags, attendance and shifts. One codebase published as Facilitrol-X Hero, Operon and EAL, in 15 languages.</p>
+                <div class="feats narrow">
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><div><p class="ft">Snag tasks, built end to end</p><p class="fd">List and details, review, comments, reopen, a dedicated close page, adding items and assets, and assigned users.</p></div></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span><div><p class="ft">Surveys</p><p class="fd">Survey statuses, comments and findings, closing a survey, and paged lists.</p></div></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg></span><div><p class="ft">Work orders</p><p class="fd">Redesigned work-order screens with filters, a calendar view, correct date handling, status flow and a performance chart.</p></div></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg></span><div><p class="ft">Assets and inventory</p><p class="fd">Asset comments and detail sheets, inventory requests, and document upload options.</p></div></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg></span><div><p class="ft">White label and release</p><p class="fd">Added the Tadoom brand (name, icons, splash, Firebase, API keys) and refreshed icons and splash screens for every brand.</p></div></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 1 1 0 10h-2"/><line x1="8" x2="16" y1="12" y2="12"/></svg></span><div><p class="ft">Connected products</p><p class="fd">Health-and-safety ticket files shown inside work orders, a QR scanner with flash and camera switch, and right-to-left fixes.</p></div></div>
+                </div>
+                <div class="tags"><span>Flutter</span><span>BLoC</span><span>Clean Architecture</span><span>Firebase</span><span>Hive cache</span><span>White-labelling</span></div>
+              </div>
+              <div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px">
+                <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 16px 8px 8px; background: #EEF1F4; border-radius: 14px">
+                  <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.facilitrolX.technician" class="shot">
+                    <img src="assets/fx-facilitrol.png" alt="Facilitrol-X field app home screen in blue, with clock-in timer and work-order progress" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
+                    Facilitrol-X
+                  </a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.operon.technician" class="shot">
+                    <img src="assets/fx-operon.png" alt="Operon brand of the same app in green, showing work orders" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
+                    Operon
+                  </a>
+                  <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.eal.technician" class="shot">
+                    <img src="assets/fx-eal.png" alt="EAL brand of the same app in dark green, showing work orders" style="width: 88px; height: 190px; object-fit: cover; display: block; border-radius: 8px">
+                    EAL
+                  </a>
+                </div>
+                <p style="margin: 0; font-size: 13px; color: #656D76; text-align: center">Tap a screen for Google Play. On the App Store:
+                  <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/facilitrol-x-hero-field-app/id6473368377" style="color: #57606A">Hero</a> ·
+                  <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/operon-field-app/id6473077208" style="color: #57606A">Operon</a> ·
+                  <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/us/app/eal-field-app/id6473384986" style="color: #57606A">EAL</a></p>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+
+        <!-- Alef -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-alef">
+            <span class="app-icons"><img src="assets/app-icons/alef-iot.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">Alef IoT Portal</span>
+              <span class="app-meta">Apr 2025 – Nov 2026 · my longest project</span>
+              <span class="app-sum">Real-time monitoring for buildings, vehicle fleets and energy use.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-alef"><div class="app-inner"><div class="app-pad">
+            <p class="lead">Mobile portal for an IoT platform that monitors buildings, vehicle fleets and energy use in real time.</p>
+            <div class="feats">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span><div><p class="ft">Buildings</p><p class="fd">Alarms, fault models, analysis history, indoor-air-quality scores and trends.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span><div><p class="ft">Fleet (TechNex)</p><p class="fd">Dispatch jobs with manual, scheduled and calendar views, vehicle alarms, driver statistics.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span><div><p class="ft">Energy and water</p><p class="fd">Dashboards, breach alerts, heatmaps with custom date ranges, multi-level charts.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span><div><p class="ft">Devices and assets</p><p class="fd">Contracts, custom attributes, bulk actions, notification groups, webhooks.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.247 7.761a6 6 0 0 1 0 8.478"/><path d="M19.075 4.933a10 10 0 0 1 0 14.134"/><path d="M4.925 19.067a10 10 0 0 1 0-14.134"/><path d="M7.753 16.239a6 6 0 0 1 0-8.478"/><circle cx="12" cy="12" r="2"/></svg></span><div><p class="ft">Live monitoring</p><p class="fd">Live data over WebSockets, map clustering and reverse geocoding.</p></div></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><div><p class="ft">Security and crash audit</p><p class="fd">Fixed the top 12 security and crash issues from an audit.</p></div></div>
+            </div>
+            <div class="tags"><span>Socket.IO</span><span>Syncfusion charts</span><span>Google Maps</span></div>
+          </div></div></div>
+        </article>
+
+        <!-- Yard -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-yard">
+            <span class="app-icons"><img src="assets/app-icons/yard.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">Yard Management</span>
+              <span class="app-meta">Mobile + Flutter Web</span>
+              <span class="app-sum">Vehicle check-in and check-out for a vehicle yard, on phones and the web.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-yard"><div class="app-inner"><div class="app-pad">
+            <div class="feats compact">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"/><circle cx="12" cy="13" r="3"/></svg></span><p class="fd">Vehicle check-in and check-out logs with photos</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg></span><p class="fd">QR scan straight to vehicle details</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></span><p class="fd">QR label printing to PDF</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg></span><p class="fd">Vehicle export with date filters</p></div>
+            </div>
+          </div></div></div>
+        </article>
+
+        <!-- REDtone -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-redtone">
+            <span class="app-icons"><img src="assets/app-icons/redtone.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">REDtone Tenant App</span>
+              <span class="app-meta">AI chatbot</span>
+              <span class="app-sum">An AI assistant for building tenants.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-redtone"><div class="app-inner"><div class="app-pad">
+            <div class="feats compact">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19v3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><rect x="9" y="2" width="6" height="13" rx="3"/></svg></span><p class="fd">Voice chat with the assistant</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></span><p class="fd">Image sharing in the chat</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span><p class="fd">Spoken replies</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><p class="fd">Language selection</p></div>
+            </div>
+          </div></div></div>
+        </article>
+
+        <!-- Pharmacy -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-pharmacy">
+            <span class="app-icons"><img src="assets/app-icons/pharmacy.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">Pharmacy App (Canada)</span>
+              <span class="app-meta">Healthcare</span>
+              <span class="app-sum">A patient app for a Canadian pharmacy, in English and French.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-pharmacy"><div class="app-inner"><div class="app-pad">
+            <div class="feats compact">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span><p class="fd">"Dr AI" voice assistant for patients</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg></span><p class="fd">QR scanning</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span><p class="fd">Prescription refills</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><p class="fd">English and French support</p></div>
+            </div>
+          </div></div></div>
+        </article>
+
+        <!-- X.eMAR + fleet -->
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-xemar">
+            <span class="app-icons"><img src="assets/app-icons/xemar.png" alt="" class="app-icon"><img src="assets/app-icons/technex.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">X.eMAR and fleet apps</span>
+              <span class="app-meta">Healthcare and fleet</span>
+              <span class="app-sum">A nurse medication app, the fleet driver app and a shared component package.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-xemar"><div class="app-inner"><div class="app-pad">
+            <div class="feats compact">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span><p class="fd">Fixes and tests for the X.eMAR nurse medication app</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg></span><p class="fd">The SPCS rebrand of the fleet driver app</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.536 11.293a1 1 0 0 0 0 1.414l2.376 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z"/><path d="M2.297 11.293a1 1 0 0 0 0 1.414l2.377 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414L6.088 8.916a1 1 0 0 0-1.414 0z"/><path d="M8.916 17.912a1 1 0 0 0 0 1.415l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.415l-2.377-2.376a1 1 0 0 0-1.414 0z"/><path d="M8.916 4.674a1 1 0 0 0 0 1.414l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z"/></svg></span><p class="fd">The shared Alef component package</p></div>
+            </div>
+          </div></div></div>
+        </article>
       </div>
 
-      <!-- More UniFi apps -->
-      <div>
-        <h4 style="margin: 0 0 14px; font-size: 17px; font-weight: 600">More UniFi apps I worked on</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
-          <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
-            <p style="margin: 0; font-weight: 600">Yard Management</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">Mobile + Flutter Web</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Vehicle check-in and check-out logs with photos, QR scan to vehicle details, QR label printing to PDF, and vehicle export with date filters.</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
-            <p style="margin: 0; font-weight: 600">REDtone Tenant App</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">AI chatbot</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">AI assistant for building tenants, with voice chat, image sharing, spoken replies and language selection.</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
-            <p style="margin: 0; font-weight: 600">Pharmacy App (Canada)</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">Healthcare</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">"Dr AI" voice assistant for patients, QR scanning, prescription refills, and English/French support.</p>
-          </div>
-          <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
-            <p style="margin: 0; font-weight: 600">X.eMAR and fleet apps</p>
-            <p style="margin: 0; font-size: 13px; color: #57606A">Healthcare and fleet</p>
-            <p style="margin: 0; color: #3D4652; font-size: 15px">Fixes and tests for a nurse medication app, the SPCS rebrand of the fleet driver app, and the shared Alef component package.</p>
-          </div>
-        </div>
+      <div class="feat" style="padding-top: 20px; border-top: 1px solid #DDE2E8">
+        <span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span>
+        <p style="margin: 0; color: #57606A; font-size: 15px"><strong style="color: #1F2328; font-weight: 600">How I worked with the team:</strong> mobile teams of up to 18 developers, alongside web, backend, QA and product people on a platform with 100+ contributors. I turned client requirements into OpenProject tickets and written specs, reviewed and merged 60+ pull requests against the web app as the source of truth, and handed work to QA with clear changelogs. I also wrote Claude Code skills that automate several of these steps.</p>
       </div>
-
-      <p style="margin: 0; padding-top: 20px; border-top: 1px solid #E3E7EC; color: #57606A; font-size: 15px"><strong style="color: #1F2328; font-weight: 600">How I worked with the team:</strong> mobile teams of up to 18 developers, alongside web, backend, QA and product people on a platform with 100+ contributors. I turned client requirements into OpenProject tickets and written specs, reviewed and merged 60+ pull requests against the web app as the source of truth, and handed work to QA with clear changelogs. I also wrote Claude Code skills that automate several of these steps.</p>
     </section>
 
-    <!-- ===== GOVISUAL + BULBUL ===== -->
-    <div style="display: flex; flex-direction: column; gap: 24px">
+    <!-- ===== BULBUL ===== -->
+    <section aria-labelledby="bulbul-title" class="co">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+          <span class="badge">Mobile Team Leader</span>
+          <span style="font-size: 13px; color: #57606A">Full-time · Aug 2025 – present</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px">
+          <img src="assets/app-icons/bulbul-customer.png" alt="" class="co-logo">
+          <h3 id="bulbul-title" class="co-title">Bulbul delivery marketplace</h3>
+        </div>
+        <p style="margin: 0; color: #3D4652; max-width: 720px">A three-sided delivery platform in Syria for restaurants, stores, its own dark store and errands. Three Flutter apps, live on Google Play, in Arabic and English.</p>
+        <div class="feats compact" style="margin-top: 4px">
+          <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><p class="fd">Lead a team of 2 mobile developers across all three apps</p></div>
+          <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.536 11.293a1 1 0 0 0 0 1.414l2.376 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z"/><path d="M2.297 11.293a1 1 0 0 0 0 1.414l2.377 2.377a1 1 0 0 0 1.414 0l2.377-2.377a1 1 0 0 0 0-1.414L6.088 8.916a1 1 0 0 0-1.414 0z"/><path d="M8.916 17.912a1 1 0 0 0 0 1.415l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.415l-2.377-2.376a1 1 0 0 0-1.414 0z"/><path d="M8.916 4.674a1 1 0 0 0 0 1.414l2.377 2.376a1 1 0 0 0 1.414 0l2.377-2.376a1 1 0 0 0 0-1.414l-2.377-2.377a1 1 0 0 0-1.414 0z"/></svg></span><p class="fd">Started the shared design-system package</p></div>
+          <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg></span><p class="fd">Led three full rebrands across all three apps</p></div>
+        </div>
+        <div class="tags"><span>Flutter</span><span>BLoC</span><span>Socket.IO</span><span>Google Maps</span><span>Shorebird OTA</span></div>
+      </div>
 
-      <!-- GoVisual -->
-      <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap">
-        <div style="flex: 1 1 420px; min-height: 300px; background: #EEF1F4; display: flex; box-sizing: border-box">
-          <img src="assets/govisual-live.jpg" alt="The live govisual.info homepage, showing a demo fashion catalog with products and prices" style="width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: 88% 40%; display: block">
-        </div>
-        <div style="flex: 1 1 420px; padding: 36px; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-            <span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF">Co-founder</span>
-            <span style="font-size: 13px; color: #57606A">My startup · Full-stack · Jul 2026 – present</span>
-          </div>
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.02em">GoVisual</h3>
-          <p style="margin: 0; color: #3D4652">An Arabic-first SaaS where small businesses publish online catalogs, reachable by link, subdomain or QR code. Started as a restaurant menu product and grew to fashion, handmade and beauty.</p>
-          <ul style="margin: 0; padding-left: 20px; color: #3D4652; display: flex; flex-direction: column; gap: 6px">
-            <li>Built product variants (sizes and colours) end to end, from the database to checkout</li>
-            <li>Built a server-side QR code service with branded styles, caching and rate limiting</li>
-            <li>Built 3D product-showcase carousels for the page builder</li>
-            <li>Wrote a CLI that onboards a new customer's whole catalog from a folder</li>
-          </ul>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px">
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Next.js 16</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">React 19</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Node / Express</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">MongoDB</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Tailwind</span>
-          </div>
-          <a target="_blank" rel="noopener noreferrer" href="https://govisual.info" style="margin-top: 8px; align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 500; color: #0F766E; text-decoration: none">Visit govisual.info
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
-          </a>
-        </div>
-      </article>
+      <div class="apps">
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-bb-customer">
+            <span class="app-icons"><img src="assets/app-icons/bulbul-customer.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">BulBul Delivery</span>
+              <span class="app-meta">Customer app · main developer</span>
+              <span class="app-sum">Order from restaurants and stores, then follow the order live.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-bb-customer"><div class="app-inner"><div class="app-pad">
+            <div class="app-split">
+              <img src="assets/bulbul-customer.png" alt="BulBul Delivery customer app home screen in Arabic, with live order tracking and offers" class="phone">
+              <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+                <div class="feats compact one">
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span><p class="fd">Took the customer app from first build to v1.4 as its main developer</p></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></span><p class="fd">Sign-in, discovery, cart, checkout, live order tracking and ratings</p></div>
+                </div>
+                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.customer" class="link">BulBul Delivery on Google Play <svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
 
-      <!-- Bulbul -->
-      <article style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 20px; overflow: hidden; display: flex; flex-wrap: wrap-reverse">
-        <div style="flex: 1 1 420px; padding: 36px; display: flex; flex-direction: column; gap: 16px">
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-            <span style="font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF">Mobile Team Leader</span>
-            <span style="font-size: 13px; color: #57606A">Full-time · Aug 2025 – present</span>
-          </div>
-          <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; letter-spacing: -0.02em">Bulbul delivery marketplace</h3>
-          <p style="margin: 0; color: #3D4652">A three-sided delivery platform in Syria for restaurants, stores, its own dark store and errands. Three Flutter apps, live on Google Play, in Arabic and English.</p>
-          <ul style="margin: 0; padding-left: 20px; color: #3D4652; display: flex; flex-direction: column; gap: 6px">
-            <li>Lead a team of 2 mobile developers across all three apps</li>
-            <li>Took the customer app from first build to v1.4 as its main developer</li>
-            <li>Started the driver app and the shared design-system package</li>
-            <li>Built multi-branch management and working hours for vendors</li>
-            <li>Led three full rebrands across all three apps</li>
-          </ul>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px">
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Flutter</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">BLoC</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Socket.IO</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Google Maps</span>
-            <span style="font-size: 13px; padding: 4px 10px; border-radius: 6px; border: 1px solid #C9D1DA; color: #3D4652">Shorebird OTA</span>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 8px">
-            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.customer" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 500; color: #0F766E; text-decoration: none">BulBul Delivery on Google Play<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
-            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.vendor" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 500; color: #0F766E; text-decoration: none">Vendor<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
-            <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.driver" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 500; color: #0F766E; text-decoration: none">Driver<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg></a>
-          </div>
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-bb-vendor">
+            <span class="app-icons"><img src="assets/app-icons/bulbul-vendor.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">BulBul Vendor</span>
+              <span class="app-meta">Vendor app</span>
+              <span class="app-sum">Restaurants and stores accept and manage incoming orders.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-bb-vendor"><div class="app-inner"><div class="app-pad">
+            <div class="app-split">
+              <img src="assets/bulbul-vendor.png" alt="BulBul Vendor app showing a new incoming order with accept and reject buttons" class="phone">
+              <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+                <div class="feats compact one">
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"/><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"/><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"/></svg></span><p class="fd">Built multi-branch management</p></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><p class="fd">Built working hours for vendors</p></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="m16 17 2 2 4-4"/><path d="M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg></span><p class="fd">Built order handling</p></div>
+                </div>
+                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.vendor" class="link">BulBul Vendor on Google Play <svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-bb-driver">
+            <span class="app-icons"><img src="assets/app-icons/bulbul-driver.png" alt="" class="app-icon"></span>
+            <span class="app-text">
+              <span class="app-name">BulBul Driver</span>
+              <span class="app-meta">Driver app · started it</span>
+              <span class="app-sum">Drivers pick up and deliver orders.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-bb-driver"><div class="app-inner"><div class="app-pad">
+            <div class="app-split">
+              <img src="assets/bulbul-driver.png" alt="BulBul Driver app listing available delivery orders with pickup and drop-off" class="phone">
+              <div style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+                <div class="feats compact one">
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span><p class="fd">Started the driver app</p></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span><p class="fd">Built order management</p></div>
+                  <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg></span><p class="fd">Built driver status flows</p></div>
+                </div>
+                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.bulbulsy.driver" class="link">BulBul Driver on Google Play <svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== GOVISUAL ===== -->
+    <section aria-labelledby="govisual-title" class="co">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+          <span class="badge">Co-founder</span>
+          <span style="font-size: 13px; color: #57606A">My startup · Full-stack · Part-time · Jul 2026 – present</span>
         </div>
-        <div style="flex: 1 1 420px; min-height: 300px; background: #EEF1F4; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 32px; box-sizing: border-box; flex-wrap: wrap">
-          <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px">
-            <img src="assets/bulbul-customer.png" alt="BulBul Delivery customer app home screen in Arabic, with live order tracking and offers" style="width: 128px; height: 228px; border-radius: 18px; border: 4px solid #1F2328; outline: 1px solid #C9D1DA; object-fit: cover; object-position: top; display: block">
-            <figcaption style="font-size: 13px; color: #57606A">Customer</figcaption>
-          </figure>
-          <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px">
-            <img src="assets/bulbul-vendor.png" alt="BulBul Vendor app showing a new incoming order with accept and reject buttons" style="width: 128px; height: 228px; border-radius: 18px; border: 4px solid #1F2328; outline: 1px solid #C9D1DA; object-fit: cover; object-position: top; display: block">
-            <figcaption style="font-size: 13px; color: #57606A">Vendor</figcaption>
-          </figure>
-          <figure style="margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px">
-            <img src="assets/bulbul-driver.png" alt="BulBul Driver app listing available delivery orders with pickup and drop-off" style="width: 128px; height: 228px; border-radius: 18px; border: 4px solid #1F2328; outline: 1px solid #C9D1DA; object-fit: cover; object-position: top; display: block">
-            <figcaption style="font-size: 13px; color: #57606A">Driver</figcaption>
-          </figure>
+        <div style="display: flex; align-items: center; gap: 14px">
+          <img src="assets/app-icons/govisual.svg" alt="" class="co-logo" style="padding: 8px; background: #FFFFFF; box-sizing: border-box">
+          <h3 id="govisual-title" class="co-title">GoVisual</h3>
         </div>
-      </article>
-    </div>
+        <p style="margin: 0; color: #3D4652; max-width: 720px">An Arabic-first SaaS where small businesses publish online catalogs, reachable by link, subdomain or QR code. Started as a restaurant menu product and grew to fashion, handmade and beauty.</p>
+      </div>
+
+      <div class="apps">
+        <article class="app">
+          <button type="button" class="app-head" aria-expanded="false" aria-controls="app-govisual">
+            <span class="app-icons"><img src="assets/app-icons/govisual.svg" alt="" class="app-icon" style="padding: 9px; background: #FFFFFF; box-sizing: border-box"></span>
+            <span class="app-text">
+              <span class="app-name">GoVisual platform</span>
+              <span class="app-meta">Web app · dashboard, API and public catalogs</span>
+              <span class="app-sum">Businesses build a catalog once and share it by link, subdomain or QR code.</span>
+            </span>
+            <span class="app-chev"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+          </button>
+          <div class="app-body" id="app-govisual"><div class="app-inner"><div class="app-pad">
+            <img src="assets/govisual-live.jpg" alt="The live govisual.info homepage, showing a demo fashion catalog with products and prices" style="width: 100%; height: 260px; object-fit: cover; object-position: 88% 40%; display: block; border-radius: 14px; border: 1px solid #DDE2E8">
+            <div class="feats">
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17a4 4 0 0 1-8 0V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2Z"/><path d="M16.7 13H19a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H7"/><path d="M 7 17h.01"/><path d="m11 8 2.3-2.3a2.4 2.4 0 0 1 3.404.004L18.6 7.6a2.4 2.4 0 0 1 .026 3.434L9.9 19.8"/></svg></span><p class="fd">Built product variants (sizes and colours) end to end, from the database to checkout</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg></span><p class="fd">Built a server-side QR code service with branded styles, caching and rate limiting</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3v18"/><rect width="12" height="18" x="6" y="3" rx="2"/><path d="M22 3v18"/></svg></span><p class="fd">Built 3D product-showcase carousels for the page builder</p></div>
+              <div class="feat"><span class="ico sm"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h8"/><path d="m4 17 6-6-6-6"/></svg></span><p class="fd">Wrote a CLI that onboards a new customer's whole catalog from a folder</p></div>
+            </div>
+            <div class="tags"><span>Next.js 16</span><span>React 19</span><span>Node / Express</span><span>MongoDB</span><span>Tailwind</span></div>
+            <a target="_blank" rel="noopener noreferrer" href="https://govisual.info" class="link">Visit govisual.info <svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div></div></div>
+        </article>
+      </div>
+    </section>
   </section>
 
   <!-- EXPERIENCE -->
@@ -424,42 +590,57 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
       <ol style="flex: 999 1 560px; min-width: 0; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
         <li style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 28px 0; border-bottom: 1px solid #E3E7EC">
           <p style="margin: 0; flex: 0 0 180px; color: #57606A; font-size: 15px">Jul 2026 – present<br>Part-time</p>
-          <div style="flex: 1 1 320px; min-width: 0">
+          <div style="flex: 1 1 320px; min-width: 0; display: flex; gap: 16px; align-items: flex-start">
+            <img src="assets/app-icons/govisual.svg" alt="" class="tl-logo" style="padding: 7px; box-sizing: border-box">
+            <div style="min-width: 0">
             <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Co-founder &amp; Full-Stack Developer</h3>
             <p style="margin: 2px 0 8px; color: #0F766E; font-weight: 500">GoVisual</p>
             <p style="margin: 0; color: #3D4652">Co-founded the product and build across the stack: Next.js dashboard, Node and MongoDB API, deployment.</p>
+            </div>
           </div>
         </li>
         <li style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 28px 0; border-bottom: 1px solid #E3E7EC">
           <p style="margin: 0; flex: 0 0 180px; color: #57606A; font-size: 15px">Aug 2025 – present</p>
-          <div style="flex: 1 1 320px; min-width: 0">
+          <div style="flex: 1 1 320px; min-width: 0; display: flex; gap: 16px; align-items: flex-start">
+            <img src="assets/app-icons/bulbul-customer.png" alt="" class="tl-logo">
+            <div style="min-width: 0">
             <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Mobile Team Leader</h3>
             <p style="margin: 2px 0 8px; color: #0F766E; font-weight: 500">Bulbul</p>
             <p style="margin: 0; color: #3D4652">Lead a mobile team of 2 developers building the customer, vendor and driver apps, and own the shared design system.</p>
+            </div>
           </div>
         </li>
         <li style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 28px 0">
           <p style="margin: 0; flex: 0 0 180px; color: #57606A; font-size: 15px">Mar 2025 – Nov 2026<br>Full-time</p>
-          <div style="flex: 1 1 320px; min-width: 0">
+          <div style="flex: 1 1 320px; min-width: 0; display: flex; gap: 16px; align-items: flex-start">
+            <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span>
+            <div style="min-width: 0">
             <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Mobile Developer</h3>
             <p style="margin: 2px 0 8px; color: #0F766E; font-weight: 500">UniFi Solutions</p>
             <p style="margin: 0; color: #3D4652">My longest role. Built and maintained 11 Flutter apps for enterprise clients in IoT, health &amp; safety, logistics, facility management and healthcare, and was a core developer on the biggest ones: HSEQ, the Facilitrol-X CAFM field app and Alef IoT Portal.</p>
+            </div>
           </div>
         </li>
         <li style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 28px 0 0; border-top: 1px solid #E3E7EC">
           <p style="margin: 0; flex: 0 0 180px; color: #57606A; font-size: 15px">2021 – 2024</p>
-          <div style="flex: 1 1 320px; min-width: 0">
+          <div style="flex: 1 1 320px; min-width: 0; display: flex; gap: 16px; align-items: flex-start">
+            <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span>
+            <div style="min-width: 0">
             <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Earlier roles</h3>
             <p style="margin: 2px 0 8px; color: #0F766E; font-weight: 500">Belouni · Technivision · Waklni · Freelance</p>
             <p style="margin: 0; color: #3D4652">Remote work for companies in Germany, Dubai and Saudi Arabia: a school-management app, a supermarket e-commerce app, a company services app, and web blogs.</p>
+            </div>
           </div>
         </li>
         <li style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 28px 0 0; margin-top: 28px; border-top: 1px solid #E3E7EC">
           <p style="margin: 0; flex: 0 0 180px; color: #57606A; font-size: 15px">2016 – 2022</p>
-          <div style="flex: 1 1 320px; min-width: 0">
+          <div style="flex: 1 1 320px; min-width: 0; display: flex; gap: 16px; align-items: flex-start">
+            <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+            <div style="min-width: 0">
             <h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 22px">Education &amp; languages</h3>
             <p style="margin: 2px 0 8px; color: #0F766E; font-weight: 500">Arab International University</p>
             <p style="margin: 0; color: #3D4652">Informatics Engineering, 4 of 5 years completed; left to work full-time as a developer. Arabic (native) and English (professional working).</p>
+            </div>
           </div>
         </li>
       </ol>
@@ -471,12 +652,12 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
     <p style="margin: 0 0 8px; font-size: 14px; color: #0F766E; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600">Skills</p>
     <h2 style="margin: 0 0 40px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; line-height: 1.1">What I work with</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px">
-      <div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">Mobile</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Flutter</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Dart</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">BLoC / Cubit</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Clean Architecture</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">go_router</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Dio / Retrofit</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Firebase / FCM</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Google Maps</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Socket.IO</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Hive</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Push notifications</span></div></div>
-<div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">Web &amp; backend</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Next.js</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">React</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">TypeScript</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Tailwind</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">TanStack Query</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Node.js</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Express</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">MongoDB</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Docker</span></div></div>
-<div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">CI/CD &amp; release</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Codemagic</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">GitHub Actions</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Shorebird OTA updates</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Google Play Console</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">App Store Connect & TestFlight</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">App signing</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Build flavours</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">White-labelling</span></div></div>
-<div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">Testing</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Unit & widget tests</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Integration tests</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Vitest</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Playwright</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Analyzer & lint gates</span></div></div>
-<div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">Product</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Arabic / English RTL</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Design systems</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Offline sync</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Real-time tracking</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">AI & voice features</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Accessibility</span></div></div>
-<div style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><h3 style="margin: 0 0 16px; font-size: 16px; font-weight: 600">Teamwork &amp; process</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Large teams (up to 18 devs)</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Clear communication</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Requirements → specs</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Jira</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">OpenProject</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Git & GitHub</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Pull requests & code review</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Branching, push / pull, rebase</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">QA handoff</span></div></div>
+      <div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">Mobile</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Flutter</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Dart</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">BLoC / Cubit</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Clean Architecture</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">go_router</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Dio / Retrofit</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Firebase / FCM</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Google Maps</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Socket.IO</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Hive</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Push notifications</span></div></div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">Web &amp; backend</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Next.js</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">React</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">TypeScript</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Tailwind</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">TanStack Query</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Node.js</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Express</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">MongoDB</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Docker</span></div></div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">CI/CD &amp; release</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Codemagic</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">GitHub Actions</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Shorebird OTA updates</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Google Play Console</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">App Store Connect & TestFlight</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">App signing</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Build flavours</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">White-labelling</span></div></div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">Testing</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Unit & widget tests</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Integration tests</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Vitest</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Playwright</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Analyzer & lint gates</span></div></div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">Product</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Arabic / English RTL</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Design systems</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Offline sync</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Real-time tracking</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">AI & voice features</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Accessibility</span></div></div>
+<div class="card" style="background: #FFFFFF; border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px"><div style="display: flex; align-items: center; gap: 12px; margin: 0 0 16px"><span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg></span><h3 style="margin: 0; font-size: 16px; font-weight: 600">Teamwork &amp; process</h3></div><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Large teams (up to 18 devs)</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Clear communication</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Requirements → specs</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Jira</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">OpenProject</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Git & GitHub</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Pull requests & code review</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">Branching, push / pull, rebase</span><span style="font-size: 14px; padding: 5px 11px; border-radius: 6px; background: #EEF1F4; color: #1F2328">QA handoff</span></div></div>
     </div>
   </section>
 
@@ -486,20 +667,24 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
     <h2 style="margin: 0 0 12px; font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.02em; line-height: 1.1">AI-assisted engineering with Claude Code</h2>
     <p style="margin: 0 0 40px; color: #57606A; max-width: 680px">I build with Claude Code every day, with guardrails around it, so I ship faster without lowering the bar.</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px">
-      <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
-        <h3 style="margin: 0; font-size: 17px; font-weight: 600">Daily workflow</h3>
+      <div class="card" style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19h8"/><path d="m4 17 6-6-6-6"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 17px; font-weight: 600">Daily workflow</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Claude Code is part of every task at all three companies: reading the ticket, writing the spec, building, testing and opening the pull request.</p>
       </div>
-      <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
-        <h3 style="margin: 0; font-size: 17px; font-weight: 600">Custom skills</h3>
+      <div class="card" style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 17px; font-weight: 600">Custom skills</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Reusable Claude workflows I wrote: customer onboarding, PR review against the web app, release changelogs for managers, and team task sync from Discord.</p>
       </div>
-      <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
-        <h3 style="margin: 0; font-size: 17px; font-weight: 600">Quality gates</h3>
+      <div class="card" style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 17px; font-weight: 600">Quality gates</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Hooks run the analyzer on every edit and the full test suite when a task ends. Nothing merges without review and a test run on a device or emulator.</p>
       </div>
-      <div style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
-        <h3 style="margin: 0; font-size: 17px; font-weight: 600">Spec first</h3>
+      <div class="card" style="border: 1px solid #DDE2E8; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+        <span class="ico"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+        <h3 style="margin: 4px 0 0; font-size: 17px; font-weight: 600">Spec first</h3>
         <p style="margin: 0; color: #3D4652; font-size: 15px">Features start as a written spec and plan, then get built in isolated git worktrees, with project context kept in CLAUDE.md files.</p>
       </div>
     </div>
@@ -513,10 +698,10 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
         <p style="margin: 0; color: #57606A; max-width: 480px">Looking for a mobile lead or a Flutter engineer who can also ship the web side? I'd like to hear about it.</p>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px">
-        <a href="mailto:mosabkilani1998@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; background: #0F766E; color: #FFFFFF; text-decoration: none; font-weight: 600">mosabkilani1998@gmail.com</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mosab-alkilani-alkadiri-057751249" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none">LinkedIn</a>
-        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/963969810648" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none">WhatsApp</a>
-        <a href="tel:+963934776319" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none">+963 934 776 319</a>
+        <a href="mailto:mosabkilani1998@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 10px; background: #0F766E; color: #FFFFFF; text-decoration: none; font-weight: 600; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>mosabkilani1998@gmail.com</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mosab-alkilani-alkadiri-057751249" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://wa.me/963969810648" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>WhatsApp</a>
+        <a href="tel:+963934776319" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 1px solid #C9D1DA; text-decoration: none; gap: 8px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>+963 934 776 319</a>
       </div>
     </div>
   </section>
@@ -524,10 +709,22 @@ a:focus-visible{outline:2px solid #0F766E;outline-offset:3px;border-radius:6px}
   <footer style="border-top: 1px solid #E3E7EC">
     <div style="max-width: 1160px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: #656D76; font-size: 14px">
       <p style="margin: 0">© 2026 Mosab Alkilani Alkadiri</p>
-      <p style="margin: 0">Damascus, Syria · Available for remote work</p>
+      <p style="margin: 0; display: inline-flex; align-items: center; gap: 6px"><svg class="i" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Damascus, Syria · Available for remote work</p>
     </div>
   </footer>
 </div>
 
+<script>
+(function(){
+  var apps=[].slice.call(document.querySelectorAll('.app'));
+  var all=document.querySelector('.expand-all');
+  function set(a,open){a.classList.toggle('open',open);a.querySelector('.app-head').setAttribute('aria-expanded',open)}
+  function sync(){if(!all)return;var every=apps.every(function(a){return a.classList.contains('open')});
+    all.setAttribute('aria-pressed',every);all.querySelector('span').textContent=every?'Collapse all':'Expand all'}
+  apps.forEach(function(a){a.querySelector('.app-head').addEventListener('click',function(){set(a,!a.classList.contains('open'));sync()})});
+  if(all)all.addEventListener('click',function(){var open=all.getAttribute('aria-pressed')!=='true';apps.forEach(function(a){set(a,open)});sync()});
+  sync();
+})();
+</script>
 </body>
 </html>
